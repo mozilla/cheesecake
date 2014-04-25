@@ -1,0 +1,3 @@
+[submodule "puppet/modules/svcops-puppet"]
+	path = puppet/modules/svcops-puppet
+	url = https://github.com/mozilla-services/svcops-puppet.git
