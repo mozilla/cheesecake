@@ -3,6 +3,7 @@
   - yaml
 :hierarchy:
  - 'deps/elasticsearch'
+ - 'deps/cache'
  - 'common'
 :yaml:
   :datadir: '/tmp/hiera/hieradata'
