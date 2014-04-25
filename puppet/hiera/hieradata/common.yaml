@@ -3,4 +3,3 @@ classes:
   - base::files
   - base::sysctl::all
   - base::yum
-  - nginx

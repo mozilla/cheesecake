@@ -1,0 +1,16 @@
+classes:
+  - elasticsearch
+  - elasticsearch::config
+elasticsearch::version: 0.90.5-1
+elasticsearch::config::cache_filter_size:
+    '5%'
+elasticsearch::config::memory_size:
+    512m
+elasticsearch::plugins:
+  - elasticsearch-plugin-site-hq
+elasticsearch::config::cluster_name:
+    marketplace-sandbox
+elasticsearch::config::expected_nodes:
+    1
+elasticsearch::config::nodes:
+  - localhost
