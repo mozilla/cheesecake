@@ -4,6 +4,7 @@
 :hierarchy:
  - 'deps/elasticsearch'
  - 'deps/cache'
+ - 'deps/mysql'
  - 'common'
 :yaml:
   :datadir: '/tmp/hiera/hieradata'
