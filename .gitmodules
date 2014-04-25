@@ -4,3 +4,6 @@
 [submodule "puppet/modules/mysql"]
 	path = puppet/modules/mysql
 	url = https://github.com/mozilla-it/puppet-mysql.git
+[submodule "puppet/modules/other/mysql"]
+	path = puppet/modules/other/mysql
+	url = https://github.com/mozilla-it/puppet-mysql.git
