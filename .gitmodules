@@ -1,3 +1,6 @@
 [submodule "puppet/modules/svcops-puppet"]
 	path = puppet/modules/svcops-puppet
 	url = https://github.com/mozilla-services/svcops-puppet.git
+[submodule "puppet/modules/mysql"]
+	path = puppet/modules/mysql
+	url = https://github.com/mozilla-it/puppet-mysql.git
