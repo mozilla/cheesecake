@@ -13,3 +13,6 @@ git submodule init
 git submodule update 
 vagrant up
 ```
+
+### SSH Keys
+Currently configured to use the standard Vagrant keys located https://github.com/mitchellh/vagrant/tree/master/keys
