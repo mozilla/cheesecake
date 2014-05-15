@@ -3,7 +3,7 @@ classes:
 marketplace::apps::solitude::admin::instances:
   payments.example.com:
     env: dev
-    project_dir: /data/local/payments.example.com
+    project_dir: /data/payments.example.com
     settings:
       aes_key_dir: ''
       bango_basic_auth: ''
@@ -28,7 +28,7 @@ marketplace::apps::solitude::admin::instances:
   payments-proxy.example.com:
     env: dev
     is_proxy: true
-    project_dir: /data/local/payments-proxy.example.com
+    project_dir: /data/payments-proxy.example.com
     settings:
       bango_password: ''
       bango_user: ''
