@@ -75,7 +75,7 @@ marketplace::apps::solitude::web::instances:
     worker_name: payments
     port: 10001
     scl: python27
-  payments-proxy-dev.allizom.org:
+  payments-proxy.example.com:
     nginx_port: 80
     server_names:
       - payments-proxy.example.com
