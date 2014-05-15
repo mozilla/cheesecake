@@ -1,5 +1,7 @@
 classes:
+  - marketplace::apps::solitude::packages
   - marketplace::apps::solitude::admin
+  - marketplace::apps::solitude::web
 marketplace::apps::solitude::admin::instances:
   payments.example.com:
     env: dev
@@ -47,3 +49,23 @@ marketplace::apps::solitude::admin::instances:
       server_email: 'root@example.com'
       statsd_host: 'localhost'
       statsd_port: '8125'
+marketplace::apps::solitude::web::instances:
+  payments.example.com:
+    nginx_port: 80
+    server_names:
+      - payments.example.com
+    user: nobody
+    project_dir: /data/payments.example.com
+    worker_name: payments
+    port: 10001
+    scl: python27
+  payments-proxy-dev.allizom.org:
+    nginx_port: 80
+    server_names:
+      - payments-proxy.example.com
+    user: nobody
+    project_dir: /data/payments-proxy.example.com
+    worker_name: payments-proxy
+    port: 10002
+    is_proxy: true
+    scl: python27
