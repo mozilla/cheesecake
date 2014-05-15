@@ -1,0 +1,49 @@
+classes:
+  - marketplace::apps::solitude::admin
+marketplace::apps::solitude::admin::instances:
+  payments.example.com:
+    env: dev
+    project_dir: /data/local/payments.example.com
+    settings:
+      aes_key_dir: ''
+      bango_basic_auth: ''
+      cache_prefix: 'payments'
+      db_url: "mysql://payments:payments@localhost/payments_example_com"
+      db_url_slave: "mysql://payments:payments@localhost/payments_example_com"
+      email_host: 'localhost'
+      hmac_key: 'aYqWTpEW7CXbVdhtqQOL'
+      memcache_hosts: 'localhost:11211'
+      mkt_oauth_secret: ''
+      paypal_url_whitelist: ''
+      s3_auth_key: ''
+      s3_auth_secret: ''
+      s3_bucket: ''
+      secret_key: 'somedevsekret'
+      sentry_dsn: ''
+      server_email: 'root@example.com'
+      solitude_proxy: 'http://payments-proxy.example.com'
+      statsd_host: 'localhost'
+      statsd_port: '8125'
+      webpay_oauth_secret: ''
+  payments-proxy.example.com:
+    env: dev
+    is_proxy: true
+    project_dir: /data/local/payments-proxy.example.com
+    settings:
+      bango_password: ''
+      bango_user: ''
+      boku_merchant_id: ''
+      boku_secret_key: ''
+      cache_prefix: 'payments-proxy'
+      email_host: 'localhost'
+      hmac_key: 'OrCfoIrZuxB1LQH3OxIR'
+      paypal_app_id: ''
+      paypal_auth_password: ''
+      paypal_auth_signature: ''
+      paypal_auth_user: ''
+      paypal_chains: ''
+      secret_key: 'somedevsekret'
+      sentry_dsn: ''
+      server_email: 'root@example.com'
+      statsd_host: 'localhost'
+      statsd_port: '8125'
