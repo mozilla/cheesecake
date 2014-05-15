@@ -5,6 +5,7 @@
  - 'deps/elasticsearch'
  - 'deps/cache'
  - 'deps/mysql'
+ - 'deps/cheesecake'
  - 'common'
 :yaml:
   :datadir: '/tmp/hiera/hieradata'
