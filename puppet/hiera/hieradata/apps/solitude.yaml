@@ -2,13 +2,22 @@ classes:
   - marketplace::apps::solitude::packages
   - marketplace::apps::solitude::admin
   - marketplace::apps::solitude::web
+  - databases::solitude
+
 marketplace::apps::solitude::admin::instances:
   payments.example.com:
+    deploy_settings:
+      cluster: dev
+      domain: payments.example.com
+      ssh_key: ''
+      cron_name: 'payments'
+      cron_user: 'nobody'
+      uwsgi: 'payments'
     env: dev
     project_dir: /data/payments.example.com
     settings:
       aes_key_dir: ''
-      bango_basic_auth: ''
+      bango_basic_auth: 'None'
       cache_prefix: 'payments'
       db_url: "mysql://payments:payments@localhost/payments_example_com"
       db_url_slave: "mysql://payments:payments@localhost/payments_example_com"
@@ -31,19 +40,26 @@ marketplace::apps::solitude::admin::instances:
     env: dev
     is_proxy: true
     project_dir: /data/payments-proxy.example.com
+    deploy_settings:
+      cluster: dev
+      domain: payments-proxy.example.com
+      ssh_key: ''
+      cron_name: 'payments-proxy'
+      cron_user: 'nobody'
+      uwsgi: 'payments-proxy'
     settings:
-      bango_password: ''
-      bango_user: ''
-      boku_merchant_id: ''
-      boku_secret_key: ''
+      bango_password: 'None'
+      bango_user: 'None'
+      boku_merchant_id: 'None'
+      boku_secret_key: 'None'
       cache_prefix: 'payments-proxy'
       email_host: 'localhost'
       hmac_key: 'OrCfoIrZuxB1LQH3OxIR'
-      paypal_app_id: ''
-      paypal_auth_password: ''
-      paypal_auth_signature: ''
-      paypal_auth_user: ''
-      paypal_chains: ''
+      paypal_app_id: 'None'
+      paypal_auth_password: 'None'
+      paypal_auth_signature: 'None'
+      paypal_auth_user: 'None'
+      paypal_chains: 'None'
       secret_key: 'somedevsekret'
       sentry_dsn: ''
       server_email: 'root@example.com'

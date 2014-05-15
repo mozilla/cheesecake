@@ -2,7 +2,10 @@ classes:
   - base
   - base::files
   - base::sysctl::all
+  - base::sysctl::web
   - base::yum
   - base::packages
   - base::packages::admin
+  - fabdeploytools::deploytools
   - nginx
+fabdeploytools::deploytools::fpm_version: 1.0.2-1
