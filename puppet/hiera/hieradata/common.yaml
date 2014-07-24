@@ -4,6 +4,8 @@ classes:
   - base::sysctl::all
   - base::sysctl::web
   - base::yum
+  - base::yum::vagrant
+  - base::yum::aws
   - base::packages
   - base::packages::admin
   - fabdeploytools::deploytools
